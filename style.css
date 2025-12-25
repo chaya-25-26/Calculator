@@ -1,0 +1,149 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator-container {
+    perspective: 1000px;
+}
+
+.calculator-body {
+    background-color: #1a1a1a;
+    width: 300px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.5),
+        inset 0 2px 5px rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.solar-panel {
+    display: flex;
+    gap: 2px;
+    background-color: #333;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.solar-panel .cell {
+    width: 12px;
+    height: 25px;
+    background-color: #2a1a1a;
+    border-right: 1px solid #444;
+}
+
+.brand-text {
+    text-align: right;
+    color: #ccc;
+}
+
+.brand-text .model {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.brand-text .type {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 0.5px;
+}
+
+.display-screen {
+    background-color: #8b9e83;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    border: 4px solid #222;
+}
+
+#display {
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 32px;
+    font-weight: bold;
+    color: #1a1a1a;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 
+        0 3px 0 #000,
+        0 4px 5px rgba(0,0,0,0.3);
+    transition: transform 0.1s, box-shadow 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 #000;
+}
+
+.btn-teal {
+    background-color: #008b8b;
+    box-shadow: 0 3px 0 #005f5f;
+}
+
+.btn-yellow {
+    background-color: #e9c46a;
+    color: #1a1a1a;
+    box-shadow: 0 3px 0 #bfa357;
+}
+
+.btn-tall {
+    grid-column: 4;
+    grid-row: 5 / span 2;
+    height: auto; /* Override fixed height */
+}
+
+.small-text {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+/* Specific adjustments for layout */
+/* The tall button logic in CSS Grid:
+   We need to make sure the other buttons flow correctly.
+   Row 5 has 1, 2, 3, +
+   Row 6 has 0, ., =
+   Since + takes up the 4th column in both rows, we just need to place it correctly.
+*/

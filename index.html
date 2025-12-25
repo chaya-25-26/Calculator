@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK-402 Electronic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-body">
+            <div class="top-section">
+                <div class="solar-panel">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="brand-text">
+                    <span class="model">KK-402</span>
+                    <span class="type">ELECTRONIC CALCULATOR</span>
+                </div>
+            </div>
+            
+            <div class="display-screen">
+                <input type="text" id="display" readonly value="0">
+            </div>
+
+            <div class="buttons-grid">
+                <!-- Row 1 -->
+                <button class="btn btn-teal" onclick="turnOn()">ON<br><span class="small-text">CE</span></button>
+                <button class="btn btn-yellow" onclick="memoryRecall()">MRC</button>
+                <button class="btn btn-yellow" onclick="memoryMinus()">M-</button>
+                <button class="btn btn-yellow" onclick="memoryPlus()">M+</button>
+
+                <!-- Row 2 -->
+                <button class="btn" onclick="turnOff()">OFF</button>
+                <button class="btn" onclick="calculateSquareRoot()">√</button>
+                <button class="btn" onclick="appendOperator('%')">%</button>
+                <button class="btn" onclick="appendOperator('/')">÷</button>
+
+                <!-- Row 3 -->
+                <button class="btn" onclick="appendNumber('7')">7</button>
+                <button class="btn" onclick="appendNumber('8')">8</button>
+                <button class="btn" onclick="appendNumber('9')">9</button>
+                <button class="btn" onclick="appendOperator('*')">×</button>
+
+                <!-- Row 4 -->
+                <button class="btn" onclick="appendNumber('4')">4</button>
+                <button class="btn" onclick="appendNumber('5')">5</button>
+                <button class="btn" onclick="appendNumber('6')">6</button>
+                <button class="btn" onclick="appendOperator('-')">-</button>
+
+                <!-- Row 5 & 6 (Grid layout handles the tall +) -->
+                <button class="btn" onclick="appendNumber('1')">1</button>
+                <button class="btn" onclick="appendNumber('2')">2</button>
+                <button class="btn" onclick="appendNumber('3')">3</button>
+                <button class="btn btn-teal btn-tall" onclick="appendOperator('+')">+</button>
+
+                <button class="btn" onclick="appendNumber('0')">0</button>
+                <button class="btn" onclick="appendDot()">.</button>
+                <button class="btn" onclick="calculateResult()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
