@@ -20,7 +20,7 @@ A simple and responsive calculator web app for basic arithmetic operations.
 
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/chaya-25-26/Calculator.git
    ```
 2. **Navigate to the project folder**
    ```sh
@@ -43,3 +43,4 @@ This project is open source and free to use.
 ## 🙏 Credits
 
 Created by Chaya, December 2025.
+
